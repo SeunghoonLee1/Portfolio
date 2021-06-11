@@ -1,3 +1,35 @@
+/* Global */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #ebf1fa;
+  --color-dark-white: #e9ebf0;
+  --color-blue: #0049ff;
+  --color-light-blue: #9cb8e6;
+  --color-dark-blue: #3d6099;
+  --color-gray: #9e9fa3;
+  --color-light-gray: #bec0c4;
+  --color-dark-grey: #797a7a;
+  --color-yellow: #fffb00;
+  --color-orange: #ffa600;
+  --color-black: #000000;
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+  /* Size */
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+}
+
 .logo {
   width: 16px;
   height: 16px;
