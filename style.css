@@ -48,6 +48,13 @@ ul {
   padding-left: 0;
 }
 
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 /* Typography */
 h1 {
   font-size: var(--font-large);
@@ -76,6 +83,7 @@ p {
   margin: 4px 0;
 }
 
+/* Navbar */
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -108,17 +116,39 @@ p {
 .navbar__menu__item:hover {
   background-color: var(--color-dark-blue);
 }
-
-/* 밑엔 내가 임의로 셋팅한거 */
-.logo {
-  width: 16px;
-  height: 16px;
+/* Home */
+#home {
+  background: url("images/home-background.png") center/cover no-repeat;
+  padding: 40px;
+  text-align: center;
 }
 
 .home__avatar {
   width: 200px;
   height: 250px;
-  border-radius: 100px;
+  border-radius: 50%;
+  border: solid var(--color-white) 2px;
+}
+
+.home__title,
+.home__description {
+  color: var(--color-white);
+}
+
+.home__contact {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px, 12px;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+  color: var(--color-white);
+}
+
+/* 밑엔 내가 임의로 셋팅한거 */
+.logo {
+  width: 16px;
+  height: 16px;
 }
 
 .job__logo {
