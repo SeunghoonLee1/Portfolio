@@ -10,7 +10,7 @@
   --color-gray: #9e9fa3;
   --color-light-gray: #bec0c4;
   --color-dark-grey: #797a7a;
-  --color-yellow: #fffb00;
+  --color-yellow: #f5eea2;
   --color-orange: #ffa600;
   --color-black: #000000;
   /* Font size */
@@ -100,7 +100,10 @@ p {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
 }
-
+.logo {
+  width: 20px;
+  height: 20px;
+}
 .navbar__menu {
   display: flex;
 }
@@ -152,6 +155,11 @@ p {
 .section {
   padding: 50px;
   text-align: center;
+  margin: auto;
+}
+
+.section__container {
+  /* 적용하고픈 section만 max width 설정 */
   max-width: 1200px;
   margin: auto;
 }
@@ -182,7 +190,7 @@ p {
 
 .major__icon i:hover {
   color: var(--color-orange);
-  transform: rotate(-39deg) scale(1.1);
+  transform: rotate(-39deg) scale(1.2);
 }
 
 .major__title,
@@ -198,6 +206,11 @@ p {
   display: flex;
   align-items: center;
   margin: 20px 0;
+}
+
+.job__logo {
+  width: 50px;
+  height: 50px;
 }
 
 .job_description {
@@ -218,16 +231,66 @@ p {
   font-size: var(--font-micro);
 }
 
-/* 밑엔 내가 임의로 셋팅한거 */
-.logo {
-  width: 20px;
-  height: 20px;
+/* Skill */
+#skills {
+  background-color: var(--color-yellow);
 }
 
-.job__logo {
-  width: 50px;
-  height: 50px;
+.skillset {
+  display: flex;
+  background-color: var(--color-light-gray);
+  color: var(--color-light-white);
+  margin: 20px 0;
 }
+
+.skillset__title {
+  color: var(--color-white);
+}
+
+.skillset__left {
+  flex-basis: 60%;
+  background-color: var(--color-dark-grey);
+  padding: 20px 40px;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill {
+  margin-bottom: 32px;
+}
+
+.skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-gray);
+}
+
+.skill__value {
+  /* width는 html 태그안에서 정의되고 데이터들을 따로 추출해서
+  Json에서 관리하고 json에서 동적으로 받아오고 이런 데이터를 html코드로
+  변환해서 자동적으로 생성을 할것이므로 전부다 html에 적용이 되어있어야함*/
+  /* width: 70%; */
+  height: 3px;
+  background-color: var(--color-orange);
+}
+
+.tools {
+  background-color: var(--color-gray);
+}
+
+.tools,
+.etc {
+  padding: 20px;
+}
+
+.skillset__right {
+  flex-basis: 40%;
+}
+
+/* 밑엔 내가 임의로 셋팅한거 */
 
 .project__img {
   width: 450px;
