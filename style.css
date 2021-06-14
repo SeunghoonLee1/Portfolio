@@ -2,8 +2,8 @@
 :root {
   /* Color */
   --color-white: #ffffff;
-  --color-light-white: #ebf1fa;
-  --color-dark-white: #e9ebf0;
+  --color-light-white: #e8e9eb;
+  --color-dark-white: ##f0f2f5;
   --color-blue: #0049ff;
   --color-light-blue: #9cb8e6;
   --color-dark-blue: #3d6099;
@@ -301,6 +301,7 @@ p {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  margin: 5px;
 }
 
 .catergory__btn.active,
@@ -321,6 +322,8 @@ p {
   color: var(--color-white);
   width: 24px;
   height: 24px;
+  /* span이라 inline으로 되어있어서 width, height적용 안됨. inline
+  block으로 바꿔줘야함.  */
   display: inline-block;
   line-height: 24px;
   position: relative;
@@ -390,9 +393,43 @@ p {
   background-color: var(--color-dark-white);
 }
 
-/* 밑엔 내가 임의로 셋팅한거 */
+/* Testimonial*/
+#testimonials {
+  background-color: var(--color-light-white);
+}
+
+.testimonials {
+  margin: 40px;
+}
+
+.testimonial {
+  margin: 32px 0;
+  display: flex;
+}
+
+.testimonial__avatar:nth-child(odd) {
+  margin-right: 40px;
+}
+.testimonial__avatar:nth-child(even) {
+  margin-left: 40px;
+}
 
 .testimonial__avatar {
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.testimonial__speechBubble {
+  padding: 18px;
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.testimonial__speechBubble p {
+  color: var(--color-light-gray);
+}
+
+.testimonial__speechBubble a {
+  color: var(--color-dark-blue);
 }
