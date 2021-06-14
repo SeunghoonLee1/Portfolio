@@ -165,6 +165,10 @@ p {
 }
 
 /* About */
+/* #about {
+  background-color: var(--color-dark-grey);
+} */
+
 .about__majors {
   display: flex;
   justify-content: space-between;
