@@ -186,18 +186,37 @@
         <h1>My work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
-            <button class="catergory__btn">
-                Java<span class="category__count">2</span>
+            <button class="catergory__btn active" data-filter="*">
+                All<span class="category__count">3</span>
             </button>
-            <button class="catergory__btn">
-                C++<span class="category__count">2</span>
+            <button class="catergory__btn" data-filter="Java">
+                Java<span class="category__count">1</span>
+            </button>
+            <button class="catergory__btn" data-filter="C++">
+                C++<span class="category__count">1</span>
+            </button>
+            <button class="catergory__btn" data-filter="Web">
+                Web<span class="category__count">1</span>
             </button>
         </div>
         <div class="work__projects">
             <a
+            href="https://github.com/Seunghoonlee1"
+            target="blank"
+            class="project"
+            data-type="Java"
+          >
+          <img src="images/textGenerator.png" alt="ProjectResult" class="project__img">
+          <div class="project__description">
+              <h3>Text Generator</h3>
+              <span>A simple text generator that predicts the next word the user types in. Implemented graph concepts using Java.</span>
+          </div>
+          </a>
+            <a
               href="https://github.com/Seunghoonlee1"
               target="blank"
               class="project"
+              data-type="C++"
             >
             <img src="images/zombiedash.png" alt="GameScreenShot" class="project__img">
             <div class="project__description">
@@ -209,6 +228,7 @@
               href="https://github.com/Seunghoonlee1"
               target="blank"
               class="project"
+              data-type="Web"
             >
             <img src="images/todolist.png" alt="ProjectResult" class="project__img">
             <div class="project__description">
@@ -216,6 +236,8 @@
                 <span>TodoListmade using HTML, CSS and JavaScript</span>
             </div>
             </a>
+           
+            
         </div>
         </div>
     </section>

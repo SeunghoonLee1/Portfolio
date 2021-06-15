@@ -3,7 +3,7 @@
   /* Color */
   --color-white: #ffffff;
   --color-light-white: #e8e9eb;
-  --color-dark-white: ##f0f2f5;
+  --color-dark-white: #f0f2f5;
   --color-blue: #0049ff;
   --color-light-blue: #9cb8e6;
   --color-dark-blue: #3d6099;
@@ -317,11 +317,11 @@ p {
 }
 
 .catergory__btn {
-  border: 1px solid var(--color-dark-white);
+  border: 2px solid var(--color-light-gray);
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
-  margin: 5px;
+  margin: 5px 0px;
 }
 
 .catergory__btn.active,
@@ -357,6 +357,13 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+
+.work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
 }
 
 .project {
@@ -368,6 +375,10 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project__img {
