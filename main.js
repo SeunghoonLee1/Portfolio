@@ -20,7 +20,18 @@ navbarMenu.addEventListener('click', (event) =>{
   if(link == null){
     return;
   }
-  console.log(event.target.dataset.link);
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({behavior: 'smooth'});
+  scrollIntoView(link);
 });
+
+//Handle scrolling when tapping on the 'home__contact' button
+const contactButton = document.querySelector('.home__contact');
+
+contactButton.addEventListener('click', (event)=>{
+  scrollIntoView('#contact');
+});
+
+//반복되는 기능들(scrolling) function으로 만들자!
+function scrollIntoView(selector){
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({behavior: 'smooth'});
+}
