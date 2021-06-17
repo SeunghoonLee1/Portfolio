@@ -1,5 +1,6 @@
 /* Global */
 :root {
+  /*:root는 전역 css변수 선언에 유용하게 사용할 수 있다.*/
   /* Color */
   --color-white: #ffffff;
   --color-light-white: #e8e9eb;
@@ -36,7 +37,7 @@
 }
 
 body {
-  font-family: "Mate SC", serif;
+  font-family: "Hind", sans-serif; /*font downloaded from google fonts*/
   margin: 0;
   cursor: default;
 }
@@ -175,9 +176,14 @@ p {
   color: var(--color-white);
 }
 
+.home__contact:hover {
+  background-color: var(--color-orange);
+}
+
 /* Section common */
 .section {
   padding: 50px;
+  padding-top: 70px;
   text-align: center;
   margin: auto;
 }
@@ -207,9 +213,10 @@ p {
   color: var(--color-dark-blue);
 }
 
-/* 에니메이션을 주려면 transition이용 */
+/* ⭐️⭐️ 에니메이션을 주려면 transition이용 ⭐️⭐️ */
 .major__icon i {
   transition: all var(--animation-duration) ease;
+  /* 이게 없으면 animation duration이 없어서 그냥 확확! 바뀜.. */
 }
 
 .major__icon i:hover {
@@ -326,6 +333,7 @@ p {
   font-size: var(--font-regular);
   padding: 8px 48px;
   margin: 5px 0px;
+  position: relative;
 }
 
 .category__btn.selected,
@@ -346,13 +354,14 @@ p {
   color: var(--color-white);
   width: 24px;
   height: 24px;
+  line-height: 24px;
   /* span이라 inline으로 되어있어서 width, height적용 안됨. inline
   block으로 바꿔줘야함.  */
   display: inline-block;
-  line-height: 24px;
-  position: relative;
+  position: absolute;
+  z-index: 1;
   top: -20px;
-  left: 4px;
+  right: 16px;
   opacity: 0;
   transition: all var(--animation-duration) ease-in;
 }
@@ -416,6 +425,7 @@ p {
   color: var(--color-orange);
 }
 
+/*h3 뒤에 데이터 삽입. css효과이므로 검색엔진등에선 검색되지않는 디자인요소로 간주*/
 .project__description h3:after {
   content: "";
   display: block;
@@ -511,8 +521,21 @@ p {
 
 /* For below 700px screen width using media query*/
 @media screen and (max-width: 700px) {
+  :root {
+    /* media query에 해당할때는 아래의 변수값이 적용!  */
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
   .navbar__toggle-btn {
     display: block;
+    top: 16px;
+    right: 16px;
+    font-size: var(--font-medium);
   }
 
   #navbar {
@@ -532,24 +555,60 @@ p {
     display: none;
   }
 
+  .section {
+    padding: 16px;
+    padding-top: 40px;
+  }
+
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
 
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
 
   .skillset {
     flex-direction: column;
   }
 
+  .category__btn {
+    margin: 4px 0;
+    width: 100%;
+  }
+
   .project {
     flex-grow: 1;
   }
 
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .testimonial__avatar {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .testimonial__avatar:nth-child(even),
+  .testimonial__avatar:nth-child(odd) {
+    margin: 0px;
+    margin-bottom: 8px;
+  }
+
+  .testimonial__speechBubble {
+    order: 1;
+  }
+
+  .arrow--up {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    right: 16px;
+    bottom: 16px;
   }
 }
